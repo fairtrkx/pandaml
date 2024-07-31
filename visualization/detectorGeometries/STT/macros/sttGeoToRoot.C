@@ -29,7 +29,8 @@ void sttGeoToRoot(string geoInputFile)
 	
     // Create a simulation run to configure the dectector simulation
     FairRunSim *run = new FairRunSim();
-	run->SetName("TGeant4");   // Use GEANT4 as the transport engine
+	run->SetName("TGeant3");   // Use GEANT4 as the transport engine
+    // run->SetIsMT(false);       // Use single thread
 	
     // Set the virtual MC configuration
     FairGenericVMCConfig *config = new FairGenericVMCConfig();

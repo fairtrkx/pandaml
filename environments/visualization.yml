@@ -25,8 +25,8 @@ dependencies:
   - brotli-python=1.0.9=py310h6a678d5_8
   - bzip2=1.0.8=h5eee18b_6
   - c-compiler=1.5.2=h0b41bf4_0
-  - ca-certificates=2024.3.11=h06a4308_0
-  - certifi=2024.2.2=pyhd8ed1ab_0
+  - ca-certificates=2024.7.4=hbcca054_0
+  - certifi=2024.7.4=py310h06a4308_0
   - cffi=1.16.0=py310h5eee18b_1
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
   - comm=0.2.1=py310h06a4308_0
@@ -64,7 +64,10 @@ dependencies:
   - importlib-metadata=7.1.0=pyha770c72_0
   - importlib_metadata=7.1.0=hd8ed1ab_0
   - ipykernel=6.28.0=py310h06a4308_0
+  - ipympl=0.9.4=pyhd8ed1ab_0
   - ipython=8.20.0=py310h06a4308_0
+  - ipython_genutils=0.2.0=pyhd8ed1ab_1
+  - ipywidgets=8.1.3=pyhd8ed1ab_0
   - jedi=0.18.1=py310h06a4308_1
   - jinja2=3.1.3=py310h06a4308_0
   - jpeg=9e=h0b41bf4_3
@@ -80,6 +83,7 @@ dependencies:
   - jupyterlab=4.0.11=py310h06a4308_0
   - jupyterlab_pygments=0.1.2=py_0
   - jupyterlab_server=2.25.1=py310h06a4308_0
+  - jupyterlab_widgets=3.0.11=pyhd8ed1ab_0
   - kernel-headers_linux-64=2.6.32=he073ed8_17
   - keyutils=1.6.1=h166bdaf_0
   - kiwisolver=1.4.5=py310hd41b1e2_1
@@ -87,9 +91,11 @@ dependencies:
   - lcms2=2.12=hddcbb42_0
   - ld_impl_linux-64=2.38=h1181459_1
   - lerc=3.0=h9c3ff4c_0
+  - libblas=3.9.0=16_linux64_openblas
   - libbrotlicommon=1.1.0=hd590300_1
   - libbrotlidec=1.1.0=hd590300_1
   - libbrotlienc=1.1.0=hd590300_1
+  - libcblas=3.9.0=16_linux64_openblas
   - libclang=14.0.6=default_h7634d5b_1
   - libclang13=14.0.6=default_h9986a30_1
   - libcups=2.3.3=h36d4200_3
@@ -99,11 +105,13 @@ dependencies:
   - libffi=3.4.4=h6a678d5_1
   - libgcc-devel_linux-64=11.2.0=h1234567_1
   - libgcc-ng=13.2.0=h77fa898_7
+  - libgfortran=3.0.0=1
   - libgfortran-ng=11.2.0=h00389a5_1
   - libgfortran5=11.2.0=h1234567_1
   - libglib=2.80.2=hf974151_0
   - libgomp=13.2.0=h77fa898_7
   - libiconv=1.17=hd590300_2
+  - liblapack=3.9.0=16_linux64_openblas
   - libllvm14=14.0.6=hcd5def8_4
   - libopenblas=0.3.21=h043d6bf_0
   - libpng=1.6.43=h2797004_0
@@ -135,12 +143,15 @@ dependencies:
   - numpy=1.26.4=py310heeff2f4_0
   - numpy-base=1.26.4=py310h8a23956_0
   - olefile=0.47=pyhd8ed1ab_0
+  - openblas=0.3.4=ha44fe06_0
   - openjpeg=2.5.0=h7d73246_0
-  - openssl=3.3.0=hd590300_0
+  - openssl=3.3.1=h4bc722e_2
   - overrides=7.4.0=py310h06a4308_0
   - packaging=23.2=py310h06a4308_0
+  - pandas=2.2.2=py310hf9f9076_1
   - pandocfilters=1.5.0=pyhd3eb1b0_0
   - parso=0.8.3=pyhd3eb1b0_0
+  - patsy=0.5.6=pyhd8ed1ab_0
   - pcre2=10.43=hcad00b1_0
   - pexpect=4.8.0=pyhd3eb1b0_3
   - pillow=8.4.0=py310h07f4688_0
@@ -153,6 +164,7 @@ dependencies:
   - pthread-stubs=0.4=h36c2ea0_1001
   - ptyprocess=0.7.0=pyhd3eb1b0_2
   - pure_eval=0.2.2=pyhd3eb1b0_0
+  - pybind11-abi=4=hd3eb1b0_1
   - pycparser=2.21=pyhd3eb1b0_0
   - pygments=2.15.1=py310h06a4308_1
   - pyparsing=3.1.2=pyhd8ed1ab_0
@@ -163,6 +175,7 @@ dependencies:
   - python-dateutil=2.9.0post0=py310h06a4308_0
   - python-fastjsonschema=2.16.2=py310h06a4308_0
   - python-json-logger=2.0.7=py310h06a4308_0
+  - python-tzdata=2024.1=pyhd8ed1ab_0
   - python-xxhash=3.4.1=py310h2372a71_0
   - python_abi=3.10=2_cp310
   - pytz=2024.1=py310h06a4308_0
@@ -175,6 +188,9 @@ dependencies:
   - rfc3339-validator=0.1.4=py310h06a4308_0
   - rfc3986-validator=0.1.1=py310h06a4308_0
   - rpds-py=0.10.6=py310hb02cf49_0
+  - scipy=1.13.1=py310heeff2f4_0
+  - seaborn=0.13.2=hd8ed1ab_2
+  - seaborn-base=0.13.2=pyhd8ed1ab_2
   - send2trash=1.8.2=py310h06a4308_0
   - setuptools=69.5.1=py310h06a4308_0
   - sip=6.5.1=py310h122e73d_2
@@ -183,6 +199,7 @@ dependencies:
   - soupsieve=2.5=py310h06a4308_0
   - sqlite=3.45.3=h5eee18b_0
   - stack_data=0.2.0=pyhd3eb1b0_0
+  - statsmodels=0.14.2=py310h261611a_0
   - sysroot_linux-64=2.12=he073ed8_17
   - terminado=0.17.1=py310h06a4308_0
   - tinycss2=1.2.1=py310h06a4308_0
@@ -202,6 +219,7 @@ dependencies:
   - webencodings=0.5.1=py310h06a4308_1
   - websocket-client=0.58.0=py310h06a4308_4
   - wheel=0.43.0=py310h06a4308_0
+  - widgetsnbextension=4.0.11=pyhd8ed1ab_0
   - xorg-libxau=1.0.11=hd590300_0
   - xorg-libxdmcp=1.1.3=h7f98852_0
   - xxhash=0.8.2=hd590300_0
@@ -211,3 +229,8 @@ dependencies:
   - zipp=3.17.0=pyhd8ed1ab_0
   - zlib=1.2.13=hd590300_5
   - zstd=1.5.6=ha6fb4c9_0
+  - pip:
+      - greenlet==3.0.3
+      - pdg==0.1.2
+      - sqlalchemy==2.0.31
+prefix: /home/nikin105/miniconda3/envs/vis
