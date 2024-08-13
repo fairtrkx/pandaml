@@ -35,7 +35,7 @@ int data_complete(Int_t nEvents=10, TString prefix="", TString outputdir="", TSt
     TString parFile     = prefix+"_par.root";   // Name of the parameter file
     TString simFile     = prefix+"_sim.root";   // Name of the simulation file
     TString digiFile    = prefix+"_digi.root";  // Name of the digitization file
-    TString skewFile    = prefix+"_skew.root";  // Name of the digitization file after applieing the skewed straws correction
+    TString skewFile    = prefix+"_skew.root";  // Name of the digitization file after applying the skewed straws correction
     TString recoFile    = prefix+"_reco.root";  // Name of the (ideal) reconstruction file
     TString outFile     = prefix+"_data.root";  // Name of the Output file (dummy file)
 
