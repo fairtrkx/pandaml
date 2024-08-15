@@ -5,7 +5,6 @@
 *.log
 *.pdf
 *.png
-*.csv
 *.h5
 *.npy
 *.pyc
