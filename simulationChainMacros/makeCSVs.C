@@ -132,13 +132,13 @@ int makeCSVs(std::string prefix, std::string outputDir)
         std::string cellsCsvFileContent = "hit_id,depcharge,energyloss,volume_id,layer_id,module_id,sector_id,isochrone,skewed\n";
 
         // Prepare the header for the "hits" CSV file
-        std::string hitsCsvFileContent = "hit_id,x,y,z,volume_id,layer_id,module_id,tclone_id\n";
+        std::string hitsCsvFileContent = "hit_id,x,y,z,volume_id,layer_id,module_id\n";
 
         // Prepare the header for the "particles" CSV file
         std::string particlesCsvFileContent = "particle_id,vx,vy,vz,px,py,pz,q,nhits,pdgcode,start_time,primary\n";
 
         // Prepare the header for the "truth" CSV file
-        std::string truthCsvFileContent = "hit_id,tx,ty,tz,tpx,tpy,tpz,weight,particle_id\n";
+        std::string truthCsvFileContent = "hit_id,tx,ty,tz,tT,tpx,tpy,tpz,weight,particle_id\n";
 
         // Number the CSV files according to the event number with a 10 digit code
         std::ostringstream ossEventCode;
@@ -164,8 +164,7 @@ int makeCSVs(std::string prefix, std::string outputDir)
                                +  std::to_string(sttHitZ->at(event).at(hit))             + ","   // z position
                                +  std::to_string(sttHitDetectorID->at(event).at(hit))    + ","   // volume ID
                                +  sttGeoData.at(sttHitTubeID->at(event).at(hit)-1).at(1) + ","   // layer ID
-                               +  std::to_string(sttHitTubeID->at(event).at(hit))        + ","   // tube ID
-                               +  std::to_string(0)                                      + "\n"; // tClone ID (currently not used)
+                               +  std::to_string(sttHitTubeID->at(event).at(hit))        + "\n"; // tube ID
         }
 
         // Create and fill the "cells" CSV file
@@ -185,11 +184,12 @@ int makeCSVs(std::string prefix, std::string outputDir)
                                 +  std::to_string(sttPointX->at(event).at(point))         + ","   // x position
                                 +  std::to_string(sttPointY->at(event).at(point))         + ","   // y position
                                 +  std::to_string(sttPointZ->at(event).at(point))         + ","   // z position
+                                +  std::to_string(sttPointT->at(event).at(point))         + ","   // time
                                 +  std::to_string(sttPointPx->at(event).at(point))        + ","   // x momentum
                                 +  std::to_string(sttPointPy->at(event).at(point))        + ","   // y momentum
                                 +  std::to_string(sttPointPz->at(event).at(point))        + ","   // z momentum
                                 +  std::to_string(1)                                      + ","   // weight
-                                +  std::to_string(sttPointTrackID->at(event).at(point)+1) + "\n"; // particle ID
+                                +  std::to_string(sttPointTrackID->at(event).at(point))   + "\n"; // particle ID
         }
 
         // Create and fill the "truth" CSV file

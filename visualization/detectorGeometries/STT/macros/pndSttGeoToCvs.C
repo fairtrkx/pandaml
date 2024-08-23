@@ -70,7 +70,7 @@ void pndSttGeoToCvs()
 	std::ofstream outputCsvFile (outputCsvFileName);
 
 	// Write the header of the .csv file
-	outputCsvFile << "tubeID, layerID, sectorID, x[cm], y[cm], z[cm], innerRadius[cm], outerRadius[cm], length[cm], angle[°] \n";
+	outputCsvFile << "tubeID,layerID,sectorID,x[cm],y[cm],z[cm],innerRadius[cm],outerRadius[cm],length[cm],angle[°],skewed \n";
 
 	// Iterate over all STT tubes / tubeIDs (starting at 1 because the entry 0 is empty)
 	for (int tubeID = 1; tubeID <= numTubes; tubeID++)
@@ -87,9 +87,9 @@ void pndSttGeoToCvs()
 		Double_t tubeLength = 2.*tube->GetHalfLength();
 		
 		// Write the tube parameters to the .csv file
-		outputCsvFile	<< tubeID 				<< ", " << layerID 				<< ", " << sectorID 			<< ", " 
-						<< translationVector[0] << ", " << translationVector[1] << ", " << translationVector[2] << ", " 
-						<< tubeInnerRadius		<< ", " << tubeOuterRadius 		<< ", " << tubeLength			<< ", ";
+		outputCsvFile	<< tubeID 				<< "," << layerID 				<< "," << sectorID 			   << "," 
+						<< translationVector[0] << "," << translationVector[1]  << "," << translationVector[2] << "," 
+						<< tubeInnerRadius		<< "," << tubeOuterRadius 		<< "," << tubeLength		   << ",";
 
 		// Get the rotation angle for the skewed straw tubes
 		if(tube->IsSkew())
@@ -115,18 +115,18 @@ void pndSttGeoToCvs()
 				 rotationVector[1] == 0))
 			{
 				// Write the angle to the .csv file
-				outputCsvFile << absRotationAngleDegree << "\n";
+				outputCsvFile << absRotationAngleDegree << "," <<  1 << "\n";
 			}
 			else
 			{
 				// Write the angle to the .csv file
-				outputCsvFile << -1.*absRotationAngleDegree << "\n";
+				outputCsvFile << -1.*absRotationAngleDegree << "," << 1 << "\n";
 			}
 		}
 		else
 		{
 			// Write the angle to the .csv file
-			outputCsvFile << "0 \n";
+			outputCsvFile << "0,0\n";
 		}
 	}
 
