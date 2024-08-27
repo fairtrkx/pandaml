@@ -70,7 +70,7 @@ void pndSttGeoToCvs()
 	std::ofstream outputCsvFile (outputCsvFileName);
 
 	// Write the header of the .csv file
-	outputCsvFile << "tubeID,layerID,sectorID,x[cm],y[cm],z[cm],innerRadius[cm],outerRadius[cm],length[cm],angle[°],skewed \n";
+	outputCsvFile << "tubeID,layerID,sectorID,x,y,z,innerRadius,outerRadius,length,angle,skewed\n";
 
 	// Iterate over all STT tubes / tubeIDs (starting at 1 because the entry 0 is empty)
 	for (int tubeID = 1; tubeID <= numTubes; tubeID++)
@@ -120,7 +120,7 @@ void pndSttGeoToCvs()
 			else
 			{
 				// Write the angle to the .csv file
-				outputCsvFile << -1.*absRotationAngleDegree << "," << 1 << "\n";
+				outputCsvFile << -1.*absRotationAngleDegree << "," << -1 << "\n";
 			}
 		}
 		else
