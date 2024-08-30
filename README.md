@@ -1,4 +1,4 @@
-# PANDA Tracking Stuides <!-- omit in toc -->
+# PANDA Tracking Studies <!-- omit in toc -->
 
 This repository contains the code for the following tasks:
 
@@ -49,7 +49,7 @@ cp -r PandaRootModules/PndTrackImport/ <path/to/PandaRoot/source>/tracking/
 
 Replace `<path/to/PandaRoot/source>` with the path to your PandaRoot source directory, where a `tracking` folder should exist.
 
-Now change add the new modules to the `CMakeLists.txt` file which should be located at `<path/to/PandaRoot/source>`. To do so open `CMakeLists.txt` with you prefered editor, e.g.
+Now change add the new modules to the `CMakeLists.txt` file which should be located at `<path/to/PandaRoot/source>`. To do so open `CMakeLists.txt` with you preferred editor, e.g.
 
 ```bash
 code <path/to/PandaRoot/source>/CMakeLists.txt
@@ -106,7 +106,7 @@ conda activate vis
 
 ### 4. Set Bash Environment Variables
 
-Adjust and add the following paths to your bash environment e.g. your `.bashrc` most commenly located at you home direcotry.
+Adjust and add the following paths to your bash environment e.g. your `.bashrc` most commonly located at you home directory.
 
 ```bash
 export SIM_FILE_PATH=<output/path/to/your/simulation/files>
